@@ -4,7 +4,7 @@ const storeSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   address: { type: String },
   gst: { type: String },
-  logo: { type: String },
+  logo: { type: String, required: true },
   storeTimings: { type: String },
 });
 const Store = mongoose.model("Store", storeSchema);
